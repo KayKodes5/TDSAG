@@ -37,11 +37,12 @@ python -m http.server 8000
 ## Before going live
 
 - **Logo:** `assets/img/logo.svg` is a placeholder recreation. Replace it with the official logo file.
-- **Photos:** swap the `.photo` placeholder `<div>`s for `<img>` tags, using approved images shared with consent.
+- **Photos:** live in `assets/img/photos/` (resized JPEGs). Make sure TDSAG has consent or a licence for each one. To add more, use `<img class="photo" src="assets/img/photos/..." alt="...">`.
 - **Placeholders:** search for `[` to find every value still to be filled in (`[###]`, `R[raised]`, campaign figures, dated milestones, office hours and so on).
 - **Resource PDFs:** the guides on `find-support.html` link to the PDFs on the current site (`https://www.tdsag.co.za/images/...`). If that site is switched off, copy the PDFs into `assets/docs/` and update the links first.
 - **Content from the current site:** programmes, mission, rights framework, bank details, contacts and George Lesotho's story were taken from tdsag.co.za. Parts of that site date from around 2015, so confirm they are still current.
 - **Impact copy:** fill in the verified costs in `impactCopy` in `js/main.js`.
+- **BackaBuddy:** the "Keep the Learning Centre Alive" button on the home page points to the BackaBuddy homepage. Swap in the campaign's own page URL (`TODO` in `index.html`).
 - **Payments:** the donate form only shows a thank-you dialog for now. Connect a provider such as PayFast, Ozow or SnapScan where the `TODO` sits in `js/main.js`.
 - **Forms:** the assistance, volunteer and contact forms only show a thank-you message. Connect them to an inbox (for example Formspree) at the `TODO` in `js/main.js`.
 - **Newsletter:** connect the subscribe form to your mailing list provider (`TODO` in `js/main.js`).
