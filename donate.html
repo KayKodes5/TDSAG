@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate | The Down Syndrome Association Gauteng</title>
+  <meta name="description" content="Make a secure once-off or monthly donation to TDSAG. Section 18A tax certificates available.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="donate-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header simple-header">
+    <div class="container">
+      <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="TDSAG home"></a>
+      <span class="secure-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Secure donation
+      </span>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container donate-hero">
+      <h1>Help every person with Down syndrome thrive</h1>
+      <p>Your gift supports early intervention, self-advocacy and family support across Gauteng. It takes about two minutes.</p>
+    </div>
+
+    <div class="container donate-layout">
+      <form id="donate-form" class="panel donate-form" novalidate>
+        <h2>1. How often?</h2>
+        <div class="segmented" role="radiogroup" aria-label="Donation frequency">
+          <label><input type="radio" name="frequency" value="once"><span>Give once</span></label>
+          <label><input type="radio" name="frequency" value="monthly" checked><span>Give monthly</span></label>
+        </div>
+        <p class="help">Monthly gifts let us plan programmes ahead. You can change or cancel at any time.</p>
+
+        <h2>2. Choose an amount</h2>
+        <div class="amounts" role="radiogroup" aria-label="Donation amount">
+          <label class="amount"><input type="radio" name="amount" value="100"><span>R100</span></label>
+          <label class="amount"><input type="radio" name="amount" value="250" checked><span>R250</span></label>
+          <label class="amount"><input type="radio" name="amount" value="500"><span>R500</span></label>
+          <label class="amount"><input type="radio" name="amount" value="other"><span>Other</span></label>
+        </div>
+        <div class="field other-amount" hidden>
+          <label for="other-amount">Your amount (R)</label>
+          <input id="other-amount" name="other_amount" type="number" min="10" step="1" inputmode="numeric" placeholder="e.g. 750">
+        </div>
+        <p class="impact-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z"/></svg>
+          <span id="impact-text"></span>
+        </p>
+
+        <h2>3. Where should it go?</h2>
+        <div class="field">
+          <label for="fund">Fund</label>
+          <select id="fund" name="fund">
+            <option value="general">Where it is needed most</option>
+            <option value="early-intervention">Early intervention</option>
+            <option value="self-advocacy">Self-advocacy training</option>
+            <option value="outreach">Outreach support groups</option>
+          </select>
+        </div>
+        <label class="check"><input type="checkbox" id="in-honour" name="in_honour"> Make this gift in honour or memory of someone</label>
+        <div id="honour-fields" class="subpanel" hidden>
+          <div class="field">
+            <label for="honour-name">In honour or memory of</label>
+            <input id="honour-name" name="honour_name" type="text">
+          </div>
+        </div>
+
+        <h2>4. Your details</h2>
+        <div class="field-grid">
+          <div class="field"><label for="first-name">First name</label><input id="first-name" name="first_name" autocomplete="given-name" required></div>
+          <div class="field"><label for="surname">Surname</label><input id="surname" name="surname" autocomplete="family-name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="mobile">Mobile (optional)</label><input id="mobile" name="mobile" type="tel" autocomplete="tel"></div>
+        </div>
+
+        <label class="check"><input type="checkbox" id="tax-cert" name="tax_certificate" checked> Send me a Section 18A tax certificate</label>
+        <div id="tax-fields" class="subpanel">
+          <div class="field-grid field-grid--2">
+            <div class="field"><label for="id-number">ID or company registration no.</label><input id="id-number" name="id_number"></div>
+            <div class="field"><label for="tax-number">Income tax number</label><input id="tax-number" name="tax_number"></div>
+          </div>
+          <div class="field"><label for="postal">Postal address</label><input id="postal" name="postal_address" autocomplete="street-address"></div>
+        </div>
+        <label class="check"><input type="checkbox" name="newsletter"> Send me The Chromosome newsletter</label>
+
+        <h2>5. Pay securely</h2>
+        <div class="pay-methods" role="radiogroup" aria-label="Payment method">
+          <label class="pay-method"><input type="radio" name="payment" value="card" checked><span>Card</span></label>
+          <label class="pay-method"><input type="radio" name="payment" value="instant-eft"><span>Instant EFT</span></label>
+          <label class="pay-method"><input type="radio" name="payment" value="snapscan"><span>SnapScan</span></label>
+        </div>
+        <button id="donate-submit" class="submit-donation" type="submit">Give R250 every month</button>
+        <p class="fine-print">Payments processed by [payment provider]. TDSAG never sees or stores your card details. A receipt is emailed to you straight away.</p>
+      </form>
+
+      <aside class="sidebar">
+        <div class="gift-summary" aria-live="polite">
+          <small>YOUR GIFT</small>
+          <strong id="gift-summary-amount">R250 / month</strong>
+          <p>to The Down Syndrome Association Gauteng</p>
+        </div>
+        <div class="side-card">
+          <h3>Give with confidence</h3>
+          <ul class="ticks">
+            <li>Registered NPO 001-339 and PBO 18/11/13/1575</li>
+            <li>Section 18A certificates for qualifying donations</li>
+            <li>Independently audited annual financial statements</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Prefer EFT?</h3>
+          <p>Bank: [Bank name]</p>
+          <p>Account: [Account number]</p>
+          <p>Branch code: [Code]</p>
+          <p>Reference: your name + “DONATION”</p>
+          <p style="color:#666">Email proof of payment to marlene.dsag@megaweb.co.za for your certificate.</p>
+        </div>
+        <div class="side-card">
+          <h3>Giving through your company?</h3>
+          <p>We can provide B-BBEE and Section 18A documents for CSI and sponsorships.</p>
+          <a href="index.html#contact">Partner with TDSAG →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <dialog id="thanks" class="thanks">
+    <h2>Thank you!</h2>
+    <p>Your gift of <strong id="thanks-amount"></strong> helps every person with Down syndrome thrive.</p>
+    <p class="help">(Demo only – connect a payment provider in <code>js/main.js</code>.)</p>
+    <form method="dialog"><button class="btn btn-primary">Close</button></form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
