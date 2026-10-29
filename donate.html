@@ -8,25 +8,38 @@
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="donate-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header simple-header">
+  <header class="site-header">
     <div class="container">
-      <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="TDSAG home"></a>
-      <span class="secure-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-        Secure donation
-      </span>
+      <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="TDSAG – The Down Syndrome Association Gauteng, home"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="impact.html">Our Impact</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="find-support.html">Find Support</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm" href="donate.html">Donate</a>
+      </nav>
     </div>
   </header>
 
   <main id="main">
     <div class="container donate-hero">
-      <h1>Help every person with Down syndrome thrive</h1>
+      <span class="secure-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Secure donation
+      </span>
+      <h1>Help every person with Down syndrome <em>thrive.</em></h1>
       <p>Your gift supports early intervention, self-advocacy and family support across Gauteng. It takes about two minutes.</p>
     </div>
 
@@ -62,7 +75,7 @@
             <option value="general">Where it is needed most</option>
             <option value="early-intervention">Early intervention</option>
             <option value="self-advocacy">Self-advocacy training</option>
-            <option value="outreach">Outreach support groups</option>
+            <option value="community-upliftment">Community upliftment</option>
           </select>
         </div>
         <label class="check"><input type="checkbox" id="in-honour" name="in_honour"> Make this gift in honour or memory of someone</label>
@@ -117,20 +130,62 @@
         </div>
         <div class="side-card">
           <h3>Prefer EFT?</h3>
-          <p>Bank: [Bank name]</p>
-          <p>Account: [Account number]</p>
-          <p>Branch code: [Code]</p>
+          <p>Account name: Down Syndrome Association Gauteng</p>
+          <p>Bank: ABSA, Eastgate branch (cheque)</p>
+          <p>Account: 4081259903</p>
+          <p>Branch code: 632005</p>
           <p>Reference: your name + “DONATION”</p>
-          <p style="color:#666">Email proof of payment to marlene.dsag@megaweb.co.za for your certificate.</p>
+          <p>Email proof of payment to marlene.dsag@megaweb.co.za for your certificate.</p>
         </div>
         <div class="side-card">
           <h3>Giving through your company?</h3>
           <p>We can provide B-BBEE and Section 18A documents for CSI and sponsorships.</p>
-          <a href="index.html#contact">Partner with TDSAG →</a>
+          <a class="link-arrow" href="get-involved.html#partner">Partner with TDSAG</a>
         </div>
       </aside>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/img/logo.svg" alt="TDSAG home"></a>
+        <p>Working to improve the lives of people with Down syndrome and other intellectual disabilities in Gauteng since 1986.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="impact.html">Our Impact</a></li>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="find-support.html">Find Support</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit or call</h4>
+        <ul>
+          <li>202 7th Avenue, Bezuidenhout Valley, Johannesburg, 2094</li>
+          <li><a href="tel:+27116154180">011 615 4180</a></li>
+          <li><a href="mailto:marlene.dsag@megaweb.co.za">marlene.dsag@megaweb.co.za</a></li>
+          <li><a href="https://www.facebook.com/TDSAG.SA/" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Registration</h4>
+        <ul>
+          <li>NPO 001-339</li>
+          <li>PBO 18/11/13/1575</li>
+          <li>Section 18A approved</li>
+          <li><a href="#">Privacy notice (POPIA)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span class="js-year">2026</span> The Down Syndrome Association Gauteng. All rights reserved.</span>
+      <a href="donate.html">Donate</a>
+    </div>
+  </footer>
 
   <dialog id="thanks" class="thanks">
     <h2>Thank you!</h2>

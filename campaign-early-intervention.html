@@ -8,40 +8,45 @@
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="campaign-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container">
-      <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="TDSAG home"></a>
+      <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="TDSAG – The Down Syndrome Association Gauteng, home"></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
       <nav id="site-nav" class="nav" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="index.html#programmes">Programmes</a>
-        <a href="index.html#get-involved">Get involved</a>
-        <a class="btn btn-yellow btn-pill" href="donate.html?fund=early-intervention">Donate</a>
+        <a href="impact.html">Our Impact</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="find-support.html">Find Support</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm" href="donate.html">Donate</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="campaign-hero">
+      <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="container">
         <div>
           <p class="eyebrow">Early intervention campaign</p>
-          <h1>A strong start for every child</h1>
-          <p>When a baby is born with Down syndrome, the first months shape so much. Help us make sure no family in Gauteng faces them without guidance.</p>
+          <h1>A strong start for <em>every child.</em></h1>
+          <p class="lead">When a baby is born with Down syndrome, the first months shape so much. Help us make sure no family in Gauteng faces them without guidance.</p>
           <div class="photo">[Approved photo or 60-second video from a family in the programme]</div>
         </div>
 
         <aside class="campaign-box">
           <div class="raised">R[raised]</div>
-          <p style="margin:0;font-size:14px">raised of our R[target] goal</p>
+          <p style="margin:0;font-size:14px;color:var(--muted)">raised of our R[target] goal</p>
           <div class="progress" role="progressbar" aria-label="Campaign progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45">
             <div class="progress-bar" style="width:45%"></div>
           </div>
@@ -56,7 +61,7 @@
               <label class="amount"><input type="radio" name="campaign-amount" value="500"><span>R500</span></label>
             </div>
           </form>
-          <a id="campaign-give-btn" class="btn btn-yellow btn-pill btn-block" href="donate.html?amount=250&amp;fund=early-intervention">Give R250 to this campaign</a>
+          <a id="campaign-give-btn" class="btn btn-yellow btn-block" href="donate.html?amount=250&amp;fund=early-intervention">Give R250 to this campaign</a>
           <div class="share">
             Share the campaign
             <div class="share-links">
@@ -70,7 +75,7 @@
     </section>
 
     <section class="section">
-      <div class="container two-col">
+      <div class="container two-col reveal">
         <div>
           <h2>The need</h2>
           <p>Around 1 in every 500 babies in South Africa is born with Down syndrome. Many families leave hospital with little information and no one to call.</p>
@@ -88,7 +93,7 @@
       </div>
     </section>
 
-    <section class="container" style="padding-bottom:60px">
+    <section class="container reveal" style="padding-bottom:100px">
       <h2>What your gift makes possible</h2>
       <div class="gift-tiers">
         <div class="gift-tier"><strong>R100</strong>[Verified programme cost]</div>
@@ -98,7 +103,7 @@
       </div>
     </section>
 
-    <section class="container two-col" style="padding-bottom:60px">
+    <section class="container two-col reveal" style="padding-bottom:100px">
       <div>
         <h2>Campaign updates</h2>
         <div class="timeline">
@@ -113,16 +118,50 @@
         <div class="match-card">
           <h2>Can your company match it?</h2>
           <p>Match donations up to a set amount and receive a Section 18A certificate plus B-BBEE documentation.</p>
-          <a class="btn btn-pill" href="mailto:marlene.dsag@megaweb.co.za?subject=Matching%20the%20Early%20Intervention%20campaign">Talk to us about matching</a>
+          <a class="btn btn-yellow" href="mailto:marlene.dsag@megaweb.co.za?subject=Matching%20the%20Early%20Intervention%20campaign">Talk to us about matching</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="campaign-footer">
-    <div class="container">
-      <span>© <span class="js-year">2026</span> The Down Syndrome Association Gauteng · NPO 001-339 · PBO 18/11/13/1575</span>
-      <span><a href="tel:+27116154180">011 615 4180</a> · <a href="mailto:marlene.dsag@megaweb.co.za">marlene.dsag@megaweb.co.za</a></span>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/img/logo.svg" alt="TDSAG home"></a>
+        <p>Working to improve the lives of people with Down syndrome and other intellectual disabilities in Gauteng since 1986.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="impact.html">Our Impact</a></li>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="find-support.html">Find Support</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit or call</h4>
+        <ul>
+          <li>202 7th Avenue, Bezuidenhout Valley, Johannesburg, 2094</li>
+          <li><a href="tel:+27116154180">011 615 4180</a></li>
+          <li><a href="mailto:marlene.dsag@megaweb.co.za">marlene.dsag@megaweb.co.za</a></li>
+          <li><a href="https://www.facebook.com/TDSAG.SA/" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Registration</h4>
+        <ul>
+          <li>NPO 001-339</li>
+          <li>PBO 18/11/13/1575</li>
+          <li>Section 18A approved</li>
+          <li><a href="#">Privacy notice (POPIA)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span class="js-year">2026</span> The Down Syndrome Association Gauteng. All rights reserved.</span>
+      <a href="donate.html">Donate</a>
     </div>
   </footer>
 

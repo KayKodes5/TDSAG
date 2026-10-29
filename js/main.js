@@ -1,11 +1,14 @@
-// TDSAG site behaviour: nav, accordion, tabs, quick-give, donate form, newsletter.
+// TDSAG site behaviour: nav, scroll effects, accordion, tabs, quick-give, forms.
 (function () {
   "use strict";
+
+  document.documentElement.classList.add("js");
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
   const formatRand = (n) => "R" + Number(n).toLocaleString("en-ZA");
+  const params = new URLSearchParams(window.location.search);
 
   // Mobile navigation ------------------------------------------------------
   const navToggle = $(".nav-toggle");
@@ -14,7 +17,32 @@
     navToggle.addEventListener("click", () => {
       const open = nav.classList.toggle("is-open");
       navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
+  }
+
+  // Header shadow once the page scrolls -----------------------------------
+  const header = $(".site-header");
+  if (header) {
+    const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Reveal sections as they scroll into view ------------------------------
+  const reveals = $$(".reveal");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
   // Accordion --------------------------------------------------------------
@@ -47,7 +75,7 @@
     });
   });
 
-  // Quick give bar (home page) --------------------------------------------
+  // Quick give (Get Involved page) ----------------------------------------
   const quickGive = $("#quick-give-form");
   if (quickGive) {
     const chips = $$(".chip", quickGive);
@@ -92,7 +120,6 @@
   // Donate form ------------------------------------------------------------
   const donate = $("#donate-form");
   if (donate) {
-    const params = new URLSearchParams(window.location.search);
     const otherInput = $("#other-amount");
     const otherWrap = $(".other-amount");
     const summary = $("#gift-summary-amount");
@@ -169,6 +196,24 @@
       if (dialog && dialog.showModal) dialog.showModal();
     });
   }
+
+  // Pre-select form options from the URL (?programme=self-advocacy, ?subject=partnership)
+  $$("select[data-param]").forEach((select) => {
+    const value = params.get(select.dataset.param);
+    if (value && $(`option[value="${value}"]`, select)) select.value = value;
+  });
+
+  // Enquiry forms (programmes, volunteer, contact) -------------------------
+  $$(".js-enquiry-form").forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const msg = $(".form-message", form);
+      if (!form.reportValidity()) return;
+      // TODO: send the form to the TDSAG inbox (e.g. Formspree, Netlify Forms or a small API).
+      msg.textContent = form.dataset.success || "Thank you! We'll be in touch soon.";
+      form.reset();
+    });
+  });
 
   // Newsletter -------------------------------------------------------------
   const newsletter = $("#newsletter-form");
